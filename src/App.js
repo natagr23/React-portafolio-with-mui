@@ -3,6 +3,7 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Profile from './Pages/Profile';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,7 +29,9 @@ function App() {
           ))}
         </Grid>
         <Grid item xs={2} sm={4} md={4}>
-          <Item>xs=2</Item>
+          <Item>
+            <Profile />
+          </Item>
         </Grid>
       </Box>
     </>
