@@ -4,37 +4,42 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Profile from './Pages/Profile';
+import Work from './Pages/Work';
+import Nav from './Pages/Nav';
+
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(2),
+  padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
 
 function App() {
   return (
-    <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          {Array.from(Array(3)).map((_, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
-              <Item>xs=2</Item>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        {/* <Route path="/" element={<Profile />} /> */}
+        <Route path="/Pages/Profile" element={<Profile />} />
+        <Route path="/Pages/Work" element={<Work />} />
+        {/* <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <Item>xs</Item>
             </Grid>
-          ))}
-        </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Item>
-            <Profile />
-          </Item>
-        </Grid>
-      </Box>
-    </>
+            <Grid item xs={6}>
+              <Item>xs=6</Item>
+            </Grid>
+            <Grid item xs>
+              <Item>xs</Item>
+            </Grid>
+          </Grid>
+        </Box> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
