@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
   Divider,
   Drawer,
   IconButton,
@@ -22,12 +26,14 @@ import {
   useMediaQuery,
 } from '@mui/material';
 
+import profileImg from '../Data/nata_photo.jpg';
+
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
 import { useNavigate, Outlet } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Profile', 'Work', 'Contact'];
 
 const Nav = (props) => {
   const { window } = props;
@@ -77,7 +83,12 @@ const Nav = (props) => {
     <>
       <Container maxWidth="lg">
         <CssBaseline />
-        <Box sx={{ display: 'flex' }}>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          minHeight="50vh"
+        >
           <AppBar component="nav">
             <Toolbar>
               <IconButton
@@ -94,7 +105,7 @@ const Nav = (props) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
               >
-                MUI
+                MY PORTAFOLIO
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
@@ -127,57 +138,34 @@ const Nav = (props) => {
           </Box>
           <Box component="main" sx={{ p: 3 }}>
             <Toolbar />
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
-              quibusdam, aliquam dolore excepturi quae. Distinctio enim at
-              eligendi perferendis in cum quibusdam sed quae, accusantium et
-              aperiam? Quod itaque exercitationem, at ab sequi qui modi delectus
-              quia corrupti alias distinctio nostrum. Minima ex dolor modi
-              inventore sapiente necessitatibus aliquam fuga et. Sed numquam
-              quibusdam at officia sapiente porro maxime corrupti perspiciatis
-              asperiores, exercitationem eius nostrum consequuntur iure aliquam
-              itaque, assumenda et! Quibusdam temporibus beatae doloremque
-              voluptatum doloribus soluta accusamus porro reprehenderit eos
-              inventore facere, fugit, molestiae ab officiis illo voluptates
-              recusandae. Vel dolor nobis eius, ratione atque soluta, aliquam
-              fugit qui iste architecto perspiciatis. Nobis, voluptatem! Cumque,
-              eligendi unde aliquid minus quis sit debitis obcaecati error,
-              delectus quo eius exercitationem tempore. Delectus sapiente,
-              provident corporis dolorum quibusdam aut beatae repellendus est
-              labore quisquam praesentium repudiandae non vel laboriosam quo ab
-              perferendis velit ipsa deleniti modi! Ipsam, illo quod. Nesciunt
-              commodi nihil corrupti cum non fugiat praesentium doloremque
-              architecto laborum aliquid. Quae, maxime recusandae? Eveniet
-              dolore molestiae dicta blanditiis est expedita eius debitis
-              cupiditate porro sed aspernatur quidem, repellat nihil quasi
-              praesentium quia eos, quibusdam provident. Incidunt tempore vel
-              placeat voluptate iure labore, repellendus beatae quia unde est
-              aliquid dolor molestias libero. Reiciendis similique
-              exercitationem consequatur, nobis placeat illo laudantium! Enim
-              perferendis nulla soluta magni error, provident repellat similique
-              cupiditate ipsam, et tempore cumque quod! Qui, iure suscipit
-              tempora unde rerum autem saepe nisi vel cupiditate iusto. Illum,
-              corrupti? Fugiat quidem accusantium nulla. Aliquid inventore
-              commodi reprehenderit rerum reiciendis! Quidem alias repudiandae
-              eaque eveniet cumque nihil aliquam in expedita, impedit quas ipsum
-              nesciunt ipsa ullam consequuntur dignissimos numquam at nisi porro
-              a, quaerat rem repellendus. Voluptates perspiciatis, in pariatur
-              impedit, nam facilis libero dolorem dolores sunt inventore
-              perferendis, aut sapiente modi nesciunt.
-            </Typography>
+
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="300"
+                image={profileImg}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Natalia Garcia
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  I have knowledge in web development (React.js, Javascript,
+                  HTML5, CSS, ). During my master's studies I used
+                  meteorological data to evaluate a hydrological model using R.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                {/* <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button> */}
+              </CardActions>
+            </Card>
           </Box>
         </Box>
         <Button variant="contained" component={Link} to={'/'}>
           <HomeIcon />
         </Button>
-        <>
-          <Typography sx={{ fontSize: '1.2 rem', paddingLeft: '10%' }}>
-            MY PORTAFOLIO
-          </Typography>
-          {/* <DrawerComp /> */}
-        </>
-
         <>
           <Tabs
             sx={{ marginLeft: 'auto' }}
