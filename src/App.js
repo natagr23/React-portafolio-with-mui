@@ -23,7 +23,7 @@ function App() {
       <Nav />
       <Routes>
         {/* <Route path="/" element={<Profile />} /> */}
-        <Route path="/Pages/Profile" element={<Profile />} />
+        <Route path="/" element={<Profile />} />
         <Route path="/Pages/Work" element={<Work />} />
         {/* <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={3}>
