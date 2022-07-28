@@ -4,26 +4,16 @@ import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
   Divider,
   Drawer,
   IconButton,
   List,
-  ListItem,
   ListItemButton,
   Toolbar,
   Typography,
-  Container,
   AppBar,
-  ListItemText,
-  Tabs,
-  Tab,
   Button,
   useTheme,
-  useMediaQuery,
 } from '@mui/material';
 
 import HomeIcon from '@mui/icons-material/Home';
