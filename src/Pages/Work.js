@@ -11,7 +11,8 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import ImgAgroapp from '../Data/Agro_App.JPG';
 import ImgPortafolio from '../Data/portafolio.PNG';
-import ImgRstudio from '../Data/RStudio.png';
+import Imgqr from '../Data/qrproducts.PNG';
+import Imgsects from '../Data/searchsongs.PNG';
 import { Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
@@ -26,12 +27,12 @@ const images = [
   },
   {
     label: 'QR Porducts',
-    imgPath: ImgRstudio,
+    imgPath: Imgqr,
     link: 'https://github.com/natagr23/QR-Products',
   },
   {
     label: 'Sects or coercive groups',
-    imgPath: ImgRstudio,
+    imgPath: Imgsects,
     link: 'https://github.com/natagr23/QR-Products',
   },
   {
@@ -64,13 +65,14 @@ export default function Profile() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="90vh"
+        minHeight="70vh"
       >
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
-          minHeight="100vh"
+          minHeight="80vh"
+          // borderRadius="50%"
         >
           <Typography>{images[activeStep].label}</Typography>
 
@@ -98,6 +100,7 @@ export default function Profile() {
                     // maxWidth: 600,
                     overflow: 'hidden',
                     width: '80%',
+                    borderRadius: '3%',
                   }}
                   src={step.imgPath}
                   alt={step.label}

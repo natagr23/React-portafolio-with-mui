@@ -30,15 +30,8 @@ const Nav = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const [value, setValue] = useState(false);
-
-  const handleTabChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   let navigate = useNavigate();
-
-  const theme = useTheme();
 
   // const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -48,6 +41,10 @@ const Nav = (props) => {
 
   const goProfile = () => {
     navigate('/'); // <-- issue imperative navigation
+  };
+
+  const goContact = () => {
+    navigate('/Pages/Contact'); // <-- issue imperative navigation
   };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -103,7 +100,9 @@ const Nav = (props) => {
             <Button sx={{ color: '#fff' }} onClick={goWork}>
               work
             </Button>
-            <Button sx={{ color: '#fff' }}>contact</Button>
+            <Button sx={{ color: '#fff' }} onClick={goContact}>
+              contact
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>

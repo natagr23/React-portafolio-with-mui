@@ -1,43 +1,11 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
+
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import profileImg from '../Data/nata_photo.jpg';
-
-import ImgReact from '../Data/react.PNG';
-import ImgWordpress from '../Data/wordpress.jpg';
-import ImgRstudio from '../Data/RStudio.png';
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const images = [
-  {
-    label: 'React Js',
-    imgPath: ImgReact,
-  },
-  {
-    label: 'WordPress',
-    imgPath: ImgWordpress,
-  },
-  {
-    label: 'Rstudio',
-    imgPath: ImgRstudio,
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
 
 export default function Profile() {
   return (
@@ -46,7 +14,7 @@ export default function Profile() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="80vh"
+        minHeight="90vh"
       >
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
