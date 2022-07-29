@@ -9,8 +9,8 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import ImgReact from '../Data/react.PNG';
-import ImgWordpress from '../Data/wordpress.jpg';
+import ImgAgroapp from '../Data/Agro_App.JPG';
+import ImgPortafolio from '../Data/portafolio.PNG';
 import ImgRstudio from '../Data/RStudio.png';
 import { Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -20,13 +20,8 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'Portafolio',
-    imgPath: ImgReact,
-    link: 'https://github.com/natagr23/React-portafolio-with-mui',
-  },
-  {
     label: 'Agro App',
-    imgPath: ImgWordpress,
+    imgPath: ImgAgroapp,
     link: 'https://github.com/natagr23/Agro_App',
   },
   {
@@ -38,6 +33,11 @@ const images = [
     label: 'Sects or coercive groups',
     imgPath: ImgRstudio,
     link: 'https://github.com/natagr23/QR-Products',
+  },
+  {
+    label: 'Portafolio',
+    imgPath: ImgPortafolio,
+    link: 'https://github.com/natagr23/React-portafolio-with-mui',
   },
 ];
 
@@ -61,20 +61,26 @@ export default function Profile() {
   return (
     <>
       <Box
-        // display="flex"
+        display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="80vh"
+        minHeight="90vh"
       >
-        <Typography>{images[activeStep].label}</Typography>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          minHeight="100vh"
+        >
+          <Typography>{images[activeStep].label}</Typography>
 
-        <Link href={images[activeStep].link}>
-          <GitHubIcon />
-        </Link>
-        <Link href={images[activeStep].link}>
-          <ScreenSearchDesktopIcon />
-        </Link>
-
+          <Link href={images[activeStep].link}>
+            <GitHubIcon />
+          </Link>
+          <Link href={images[activeStep].link}>
+            <ScreenSearchDesktopIcon />
+          </Link>
+        </Box>
         <AutoPlaySwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={activeStep}
@@ -87,11 +93,11 @@ export default function Profile() {
                 <Box
                   component="img"
                   sx={{
-                    height: 255,
+                    // height: 355,
                     display: 'block',
-                    maxWidth: 400,
+                    // maxWidth: 600,
                     overflow: 'hidden',
-                    width: '100%',
+                    width: '80%',
                   }}
                   src={step.imgPath}
                   alt={step.label}
