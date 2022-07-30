@@ -114,7 +114,7 @@ export default function Profile() {
         </AutoPlaySwipeableViews>
         <MobileStepper
           steps={maxSteps}
-          position="static"
+          // position="static"
           activeStep={activeStep}
           nextButton={
             <Button
