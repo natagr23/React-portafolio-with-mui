@@ -9,27 +9,25 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from '@mui/material';
 
-const icons = [
-  {
-    label: 'LinkedIn',
-    imgPath: LinkedInIcon,
-    link: 'https://github.com/natagr23/Agro_App',
-  },
-  {
-    label: 'Github',
-    imgPath: GitHubIcon,
-    link: 'https://github.com/natagr23/QR-Products',
-  },
-  {
-    label: 'Email',
-    imgPath: EmailIcon,
-    link: 'https://github.com/natagr23/QR-Products',
-  },
-];
+// const icons = [
+//   {
+//     label: 'LinkedIn',
+//     imgPath: LinkedInIcon,
+//     link: 'https://github.com/natagr23/Agro_App',
+//   },
+//   {
+//     label: 'Github',
+//     imgPath: GitHubIcon,
+//     link: 'https://github.com/natagr23/QR-Products',
+//   },
+//   {
+//     label: 'Email',
+//     imgPath: EmailIcon,
+//     link: 'https://github.com/natagr23/QR-Products',
+//   },
+// ];
 
 export default function Contact() {
-  const [spacing, setSpacing] = React.useState(5);
-
   return (
     <>
       <Box

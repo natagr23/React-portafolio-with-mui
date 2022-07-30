@@ -54,17 +54,25 @@ const Nav = (props) => {
       <Divider />
 
       <List>
-        {/* {navItems.map((item) => (
-          <ListItem key={item}>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))} */}
+        <ListItemButton
+          sx={{
+            textAlign: 'center',
+            ':hover': {
+              transition: 'all .3s ease',
+              color: '#001a5b',
+            },
+            diplay: 'flex',
+            gap: '15px',
+            paddingLeft: '20%',
 
-        <ListItemButton sx={{ textAlign: 'center' }}>PROFILE</ListItemButton>
+            fontSize: '15px',
+            textTransform: 'uppercase',
+          }}
+        >
+          PROFILE
+        </ListItemButton>
         <ListItemButton sx={{ textAlign: 'center' }}>WORK</ListItemButton>
-        <ListItemButton sx={{ textAlign: 'center' }}>CONTACT</ListItemButton>
+        <ListItemButton sx={{ textAlign: 'center' }}>RESUME</ListItemButton>
       </List>
     </Box>
   );
@@ -74,7 +82,7 @@ const Nav = (props) => {
 
   return (
     <>
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ background: '#001a5b' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -101,7 +109,7 @@ const Nav = (props) => {
               work
             </Button>
             <Button sx={{ color: '#fff' }} onClick={goContact}>
-              contact
+              resume
             </Button>
           </Box>
         </Toolbar>

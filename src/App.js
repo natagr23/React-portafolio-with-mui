@@ -7,6 +7,7 @@ import Profile from './Pages/Profile';
 import Work from './Pages/Work';
 import Contact from './Pages/Contact';
 import Nav from './Pages/Nav';
+import Footer from './Pages/Footer';
 
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Pages/Work" element={<Work />} />
         <Route path="/Pages/Contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

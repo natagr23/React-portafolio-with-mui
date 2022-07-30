@@ -12,7 +12,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import ImgAgroapp from '../Data/Agro_App.JPG';
 import ImgPortafolio from '../Data/portafolio.PNG';
 import Imgqr from '../Data/qrproducts.PNG';
-import Imgsects from '../Data/searchsongs.PNG';
+import Imgsearch from '../Data/searchsongs.PNG';
 import { Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
@@ -31,8 +31,8 @@ const images = [
     link: 'https://github.com/natagr23/QR-Products',
   },
   {
-    label: 'Sects or coercive groups',
-    imgPath: Imgsects,
+    label: 'Search songs',
+    imgPath: Imgsearch,
     link: 'https://github.com/natagr23/QR-Products',
   },
   {
@@ -66,6 +66,9 @@ export default function Profile() {
         justifyContent="center"
         alignItems="center"
         minHeight="70vh"
+        sx={{
+          background: 'rgb(255, 246, 241)',
+        }}
       >
         <Box
           display="flex"
