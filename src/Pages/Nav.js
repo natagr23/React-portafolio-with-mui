@@ -47,19 +47,24 @@ const Nav = (props) => {
     navigate('/Pages/Contact'); // <-- issue imperative navigation
   };
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: 'center', background: '#001a5b', color: '#fff' }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Natalia García
       </Typography>
       <Divider />
 
       <List>
         <ListItemButton
+          onClick={goProfile}
           sx={{
             textAlign: 'center',
             ':hover': {
-              transition: 'all .3s ease',
-              color: '#001a5b',
+              transition: 'all .4s ease',
+              color: '#0A8DE2',
+              background: '#001a5b',
             },
             diplay: 'flex',
             gap: '15px',
@@ -71,8 +76,44 @@ const Nav = (props) => {
         >
           PROFILE
         </ListItemButton>
-        <ListItemButton sx={{ textAlign: 'center' }}>WORK</ListItemButton>
-        <ListItemButton sx={{ textAlign: 'center' }}>RESUME</ListItemButton>
+        <ListItemButton
+          onClick={goWork}
+          sx={{
+            textAlign: 'center',
+            ':hover': {
+              transition: 'all .4s ease',
+              color: '#0A8DE2',
+              background: '#001a5b',
+            },
+            diplay: 'flex',
+            gap: '15px',
+            paddingLeft: '20%',
+
+            fontSize: '15px',
+            textTransform: 'uppercase',
+          }}
+        >
+          WORK
+        </ListItemButton>
+        <ListItemButton
+          onClick={goContact}
+          sx={{
+            textAlign: 'center',
+            ':hover': {
+              transition: 'all .4s ease',
+              color: '#0A8DE2',
+              background: '#001a5b',
+            },
+            diplay: 'flex',
+            gap: '15px',
+            paddingLeft: '20%',
+
+            fontSize: '15px',
+            textTransform: 'uppercase',
+          }}
+        >
+          RESUME
+        </ListItemButton>
       </List>
     </Box>
   );

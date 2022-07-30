@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        height: '10vh',
+        height: '1vh',
         display: 'flex',
         justifyContent: 'center',
-        width: '15%',
+        width: '100%',
         alignItems: 'center',
         position: 'sticky',
 

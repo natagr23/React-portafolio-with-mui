@@ -18,7 +18,7 @@ export default function Profile() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="90vh"
+        minHeight="85vh"
         sx={{
           background: 'rgb(255, 246, 241)',
         }}
